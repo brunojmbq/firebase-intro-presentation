@@ -69,200 +69,61 @@
         -->
         <section title="">
           <br><br>
-          <h2>Intro to Firebase</h2>
-          <img src="images/firebase-logo.png" class="no-style">
+          <h2>Introdução ao Firebase</h2>
+          <img src="images/firebase-logo.png" class="no-style" height="250px">
           <br> <br>
           <p>
-            <h6>YOUR_NAME / <a href="http://twitter.com/YOUR_TWITTER_HANDLE">@YOUR_TWITTER_HANDLE</a></h6>
+            <h6>mova.se</h6>
 
           </p>
         </section>
-
-        <section>
-          <p class="text-cream text-medium">The <span class="text-discs">Realtime Backend</span></p>
-          <p class="text-cream text-medium">for your App</p>
-        </section>
-
-        <section>
-          <p class="text-medium">Creating an app shouldn't require managing complex infrastructure.</p>
-        </section>
-
-        <section>
-          <h3>The Full Stack</h3>
-          <img src="images/full-stack.png" alt="The Full Stack" class="no-style" />
-        </section>
-
-        <section>
-          <p class="text-small">The full stack is never really that simple</p>
-          <img src="images/backend-reqs.gif" alt="" class="white-bg no-style" />
-        </section>
-
-        <section>
-          <p class="text-small">... and neither is the client side</p>
-          <br><br>
-          <img src="images/clients.png" alt="gdocs" class="no-style" />
-        </section>
-
-        <section>
-					<p class="text-medium era-point">The user doesn't care about your backend</p>
-				</section>
-
-        <section>
-          <h4>The user expects</h4>
-          <p class="text-small era-point">Speed</p>
-          <p class="text-small era-point">Offline</p>
-          <p class="text-small era-point">Multi-platform</p>
-          <p class="text-small era-point">Simple Authentication</p>
-        </section>
-
         <!--
           Firebase
         -->
+
+
         <section>
-          <h3>Firebase</h3>
-          <img src="images/firebase-logo.png" class="no-style era-point">
-          <br>
-          <p class="text-cream">The <span class="text-discs">Realtime Backend</span></p>
-          <p class="text-cream">for your App</p>
+          <h4>As ferramentas do Firebase</h4>
         </section>
-
-        <section>
-          <h4>The Firebase Backend</h4>
-          <img src="images/data-box.png" class="no-style framework-logo">
-          <img src="images/login-box.png" class="no-style framework-logo">
-          <img src="images/security-box.png" class="no-style framework-logo">
-          <img src="images/hosting-box.png" class="no-style framework-logo">
-        </section>
-
-        <section>
-					<h3>Forget the Server</h3>
-					<p class="era-point">Firebase apps can run on client-side code only</p>
-					<br>
-					<img src="images/platforms.png" alt="" class="no-style framework-logo">
-				</section>
-
+        
         <section>
           <img src="images/data-box.png" class="no-style framework-logo">
         </section>
 
         <section>
-          <h2>Cloud database</h2>
-          <p class="era-point">NoSQL data-store</p>
-          <p class="era-point">Returns JSON from a RESTful API</p>
+          <h2>Realtime Database</h2>
+          <p class="era-point">Banco de dados hospedado na nuvem</p>
+          <p class="era-point">NoSQL</p>
+          <p class="era-point">Retorna JSON através de uma API RESTful</p>
+          <p class="era-point">Banco de dados hospedado na nuvem</p>
         </section>
 
         <section>
-          <img src="images/simple-api.png" alt="" class="no-style">
-        </section>
-
-        <section>
-          <h2>Realtime Data</h2>
-          <p class="era-point text-cream">
-            Whenever <span class="text-discs">data is  updated in Firebase</span>,
-            it sends the update down to every <span class="text-tarheel">listening client</span>
+          <h2>Tempo real</h2>
+          <p class="era-point">
+            Sempre que m dado é atualizado no Firebase, todos os clientes conectados 
+            recebem essa atualização em milissegundos</span>
+          </p>
+          <p class="era-point">
+            Experiências colaborativas sem pensar em códigos de rede
           </p>
         </section>
 
         <section>
-          <img src="images/Realtime-sync-anim.gif" alt="" class="no-style" style="max-width: 85%;">
+          <h2>Off-line</h2>
+          <p class="era-point">Permanecem ativos</p>
+          <p class="era-point">Mantém os dados no disco, de forma transparente</p>
+          <p class="era-point">Sincronização automática quando a conexão é reestabelecida</p>
         </section>
 
         <section>
-          <p class="text-medium">SDKs</p>
-          <img src="images/platforms.png" alt="" class="no-style">
-        </section>
-
-        <section>
-          <h2>Store Data</h2>
-          <code-box langs="JavaScript,Swift,Java">
-            <code-example lang="JavaScript">
-var ref = new Firebase("https://&lt;your-firebase-app&gt;.firebaseio.com/message");
-ref.set('All the things');
-            </code-example>
-            <code-example lang="Swift">
-let ref = Firebase(url: "https://&lt;your-firebase-app&gt;.firebaseio.com/message")
-ref.setValue("All the things")
-            </code-example>
-            <code-example lang="Java">
-Firebase ref = new Firebase("https://&lt;your-firebase-app&gt;.firebaseio.com/message");
-ref.setValue("All the things");
-            </code-example>
-          </code-box>
-
-        </section>
-
-        <section>
-          <h2>Sync Data</h2>
-
-          <code-box langs="JavaScript,Swift,Java">
-            <code-example lang="JavaScript">
-var ref = new Firebase("https://&lt;your-firebase-app&gt;.firebaseio.com/message");
-ref.on("value", function(snap) {
-  console.log(snap.val());
-});
-            </code-example>
-            <code-example lang="Swift">
-let ref = Firebase(url: "https://&lt;your-firebase-app&gt;.firebaseio.com/message")
-ref.observeEventType(.Value, withBlock: { snap in
-  println(snap.value)
-})
-            </code-example>
-            <code-example lang="Java">
-Firebase ref = new Firebase("https://&lt;your-firebase-app&gt;.firebaseio.com/message");
-ref.addValueEventListener(new ValueEventListener() {
-  @Override
-  public void onDataChange(DataSnapshot snapshot) {
-    System.out.println(snapshot.getValue());
-  }
-  @Override public void onCancelled(FirebaseError error) { }
-});
-            </code-example>
-          </code-box>
-
-        </section>
-
-        <section>
-          <h3>Offline</h3>
-          <img class="no-style" src="images/offline.png">
-        </section>
-
-        <section>
-          <h3>Intermittent Offline</h3>
-
-          <p class="text-small">What happens when you go through a tunnel?</p>
-          <br><br>
-          <p class="text-small fragment">
-            Firebase clients store a local cache of your data. When the user
-            goes offline, the app still works as expected with the local cache.
-          </p>
-
-        </section>
-
-        <section>
-          <h3>Extended Offline</h3>
-
-          <p class="text-small">What happens when you go on a flight?</p>
-          <br><br>
-          <p class="text-small fragment">
-            On mobile, Firebase persists data to a local store. The app will continue
-            to work even across app restarts.
-          </p>
-
-        </section>
-
-        <section>
-          <h3>One line of code</h3>
-
-          <code-box langs="Swift,Java">
-            <code-example lang="Swift">
-Firebase.defaultConfig().persistenceEnabled = true
-            </code-example>
-            <code-example lang="Java">
-Firebase.getDefaultConfig().setPersistenceEnabled(true);
-            </code-example>
-          </code-box>
-
-        </section>
+            <h2>Preços</h2>
+            <h3>(Spark -- Flame -- Blaze)</h3>
+            <p class="era-point">Conexões Simultâneas: 100 -- Ilimitado -- Ilimitado</p>
+            <p class="era-point">GB Armazenados: 1GB -- 2,5GB -- $5/GB</p>
+            <p class="era-point">GB de download: 10GB/mês -- 20GB/mês -- $1/GB</p>
+            <p class="era-point">Backups automatizados: Não -- Não -- Sim</p>
+       </section>
 
         <section>
           <img src="images/login-box.png" class="no-style framework-logo">
@@ -271,11 +132,15 @@ Firebase.getDefaultConfig().setPersistenceEnabled(true);
         <section>
 
           <p class="era-point text-small">
-            Firebase supports several forms of authentication
+            Firebase suporta várias formas de autenticação
           </p>
 
           <p class="era-point fragment">
-            Email &amp; Password
+            Número de telefone
+          </p>
+
+          <p class="era-point fragment">
+            Email &amp; Senha
           </p>
 
           <p class="era-point fragment">
@@ -295,235 +160,108 @@ Firebase.getDefaultConfig().setPersistenceEnabled(true);
           </p>
 
           <p class="era-point fragment">
-             Anonymous
+             Anônimo
           </p>
 
           <p class="era-point fragment">
-             ...and even custom backends
+             ...ou outras formas customizadas
           </p>
 
         </section>
 
-        <section class="hasCode">
-
-          <h3>Authentication</h3>
-
-          <code-box langs="JavaScript,Swift,Java">
-            <code-example lang="JavaScript" prop="one">
-// Login with Google
-ref.authWithOAuthPopup('google', function(error, authData) {
-  console.log(authData);
-});
-            </code-example>
-
-            <code-example lang="Swift">
-ref.authWithOAuthProvider("google", token: "&lt;OAuth Token&gt;",
-    withCompletionBlock: { error, authData in
-    if error != nil {
-        // Error authenticating with Firebase with OAuth token
-    } else {
-        // User is now logged in!
-        println("Successfully logged in! \(authData)")
-    }
-})
-            </code-example>
-
-            <code-example lang="Java">
-ref.authWithOAuthToken("google", "&lt;OAuth Token&gt;", new Firebase.AuthResultHandler() {
-    @Override
-    public void onAuthenticated(AuthData authData) {
-        // the Google user is now authenticated with your Firebase app
-    }
-
-    @Override
-    public void onAuthenticationError(FirebaseError firebaseError) {
-        // there was an error
-    }
-});
-            </code-example>
-
-          </code-box>
-
-        </section>
-
-        <section class="hasCode">
-
-          <h3>Authentication</h3>
-
-          <code-box langs="JavaScript,Swift,Java">
-            <code-example lang="JavaScript" prop="one">
-// Listen for authentcated users
-ref.onAuth(function(authData) {
-  if(authData) {
-    console.log('User is logged in!');
-  }
-});
-            </code-example>
-
-            <code-example lang="Swift">
-// Listen for authenticated users
-ref.observeAuthEventWithBlock { authData in
-    if authData != nil {
-        println("User is logged in! \(authData)")
-    }
-}
-            </code-example>
-
-            <code-example lang="Java">
-// Listen for authentcated users
-ref.addAuthStateListener(new Firebase.AuthStateListener() {
-    @Override
-    public void onAuthStateChanged(AuthData authData) {
-        if (authData != null) {
-            System.out.println("User is logged in!");
-        }
-    }
-});
-            </code-example>
-
-          </code-box>
-
-        </section>
-
-        <section>
-          <img src="images/security-box.png" class="no-style framework-logo">
-        </section>
-
-        <section>
-          <h3>Security</h3>
-          <p class="era-point">
-            By default everyone can write and read
-          </p>
-					<pre>
-						<code data-trim class="json">
-{
-  "rules": {
-    ".read": true,
-    ".write": true,
-  }
-}
-						</code>
-					</pre>
-        </section>
-
-        <section>
-          <p class="era-point">
-            Everyone can read, but no one can write
-          </p>
-					<pre>
-						<code data-trim class="json">
-{
-  "rules": {
-    ".read": true,
-    ".write": false,
-  }
-}
-						</code>
-					</pre>
-        </section>
-
-        <section>
-          <p class="era-point">
-            Secure specific parts of your Firebase
-          </p>
-					<pre>
-						<code data-trim class="json">
-{
-  "rules": {
-    ".read": true,
-    ".write": false,
-    "message": {
-      ".write": true 
-    }
-  }
-}
-						</code>
-					</pre>
-        </section>
-
-        <section>
-          <p class="era-point">
-            Special variables to power authentication
-          </p>
-					<pre>
-						<code data-trim class="json">
-{
-  "rules": {
-    ".read": true,
-    "message": {
-      ".write": "auth !== null",
-      ".validate": "!data.exists()"
-    }
-  }
-}
-						</code>
-					</pre>
-        </section>
-
-
-        <section>
-					<h3>Security</h3>
-					<p class="text-small">Use $wildcards as route parameters</p>
-					<pre>
-						<code data-trim class="json">
-{
-  "rules": {
-    ".read": false,
-    ".write": false,
-    "users": {
-      "$userid": {
-        ".read": "true",
-        ".write": "auth.uid === $userid"
-      }
-    }
-  }
-}
-						</code>
-					</pre>
-
-				</section>
-
+         <section>
+            <h2>Preços</h2>
+            <h3>(Spark -- Flame -- Blaze)</h3>
+            <p class="era-point">Por número de telefone: 10k/month -- 10k/month -- $0.06/verificação com sucesso</p>
+            <p class="era-point">No Blaze: primeiros 10k free</p>
+            <p class="era-point">Demais tipos de autenticação: Free para todos planos</p>
+       </section>
+      
         <section>
           <img src="images/hosting-box.png" class="no-style framework-logo">
         </section>
 
   			<section>
-  					<h3>Hosting</h3>
-  					<p class="text-small">When you're ready to launch</p>
+  					<h3>Hospedagem</h3>
+  					<p class="text-small">Quando estiver pronto para subir a aplicação</p>
   					<pre>
   						<code data-trim class="bash">
 firebase init
-# select your firebase
 firebase deploy
-# party time
   						</code>
   					</pre>
   			</section>
 
-        <section>
-					<h3>Hosting</h3>
-					<p class="text-small era-point">Production-grade</p>
-          <p class="text-small era-point">Static Asset</p>
-					<p class="text-small era-point">Free SSL</p>
-					<p class="text-small era-point">CDN cached assets</p>
-					<p class="text-small era-point">One click rollbacks</p>
+      <section>
+					<h3>Hospedagem</h3>
+					<p class="text-small era-point">Pronto pra produção</p>
+					<p class="text-small era-point">HTTPS</p>
+					<p class="text-small era-point">Rollback com um clique</p>
 				</section>
 
-        <section>
-          <h1>(Optional) Live Coding</h1>
+         <section>
+            <h2>Preços</h2>
+            <h3>(Spark -- Flame -- Blaze)</h3>
+            <p class="era-point">GB armazenados: 1GB -- 10GB -- $0.026/GB</p>
+            <p class="era-point">GB transferidos: 10GB/mês -- 50GB/mês -- $0.15/GB</p>
+            <p class="era-point">SSL: Free pra todos planos</p>
         </section>
 
         <section>
-					<h3>Tooling & Integration</h3>
+            <div style="font-weight: bold;">Storage</div>
+            <img src="images/storage.png" class="framework-logo" width="10px"
+              style="background-color: #4e4a4d; padding: 40px 20px; border: none;">
+        </section>
+
+        <section>
+					<h3>Robusto</h3>
+					<p class="text-small era-point">Segundo plano</p>
+					<p class="text-small era-point">Independente da qualidade da sua rede</p>
+					<p class="text-small era-point">Reiniciados no ponto em que foram interrompidos</p>
 				</section>
+
+        <section>
+					<h3>Seguro</h3>
+					<p class="text-small era-point">Integrado ao Firebase Authentication</p>
+					<p class="text-small era-point">Segurança declarativa (nome do arquivo, tamanho, tipo, etc)</p>
+				</section>
+
+        <section>
+					<h3>Escalável</h3>
+					<p class="text-small era-point">Escalonamento até por petabyte</p>
+					<p class="text-small era-point">Mesma infraestrutura usada pelo Snapchat</p>
+				</section>
+
+        <section>
+            <h2>Preços</h2>
+            <h3>(Spark -- Flame -- Blaze)</h3>
+            <p class="era-point">GB armazenados: 5GB -- 50GB -- $0.026/GB</p>
+            <p class="era-point">GB de download: 1GB/dia -- 50GB/dia -- $0.12/GB</p>
+            <p class="era-point">Operações de upload: 20 mil/dia -- 1 milhão/dia -- $0.10/mil</p>
+            <p class="era-point">Operações de download: 50 mil/dia -- 250 mil/dia -- $0.01/mil</p>
+        </section>
+
+        <section>
+          <div style="font-weight: bold;">Cloud Functions</div>
+          <img src="images/cloud-functions.png" class="framework-logo" width="10px"
+            style="background-color: #4e4a4d; padding: 40px 20px; border: none;">
+        </section>
+
+         <section>
+					<h3>Integração com a plataforma Firebase</h3>
+					<p class="text-small era-point">Realtime Database Triggers</p>
+					<p class="text-small era-point">Firebase Authenticatino Triggers</p>
+				</section>
+
+        <section>
+          <h1>Integrações</h1>
+          <img src="images/react.png" class="framework-logo no-style" />
+          <img src="images/angularjs.png" class="framework-logo no-style" />
+        </section>
 
 
         <section>
-          <h3>Bindings</h3>
-          <img src="images/backbonejs.png" class="framework-logo no-style" />
-          <img src="images/emberjs.png" class="framework-logo no-style" />
-          <img src="images/react.png" class="framework-logo no-style" />
-          <img src="images/angularjs.png" class="framework-logo no-style" />
+          <h1>Live Coding</h1>
         </section>
 
         <section>
@@ -637,7 +375,7 @@ app.controller('ChatCtrl', function($scope, $firebaseArray) {
     </div>
 
     <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.min.js"></script>
+    <script src="js/reveal.js"></script>
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 
     <script>
